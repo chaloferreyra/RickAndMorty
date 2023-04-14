@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+    text-align: center;
+
+
+	margin-top: 80px;
+    padding: 50px;
+    background-image: url("../images/3958061.png");
+    background-size: 90%;
+    
+    background-position: center;
+    
+}
+
+.formUser{
+    width: 200px;
+    height: 200px;
+    margin-left: 200px;
+}
+
+label {
+    color: white;
+}
+
+.danger {
+    color: red;
+}

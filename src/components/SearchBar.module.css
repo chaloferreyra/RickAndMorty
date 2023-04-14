@@ -1,0 +1,16 @@
+button{
+    background-color: green;
+    border-radius:4px;
+    padding: 5px;
+    margin-left: 10px;
+}
+.navegacion{
+    padding: 20px;
+    margin: 20px;
+    background-color:rgb(47, 102, 56);
+    border-radius:4px;
+}
+
+.ingresar{
+    margin: 5px;
+}

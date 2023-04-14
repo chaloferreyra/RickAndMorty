@@ -1,38 +1,38 @@
+body{
+   background-image: url("./images/fondo_r_y_m.png");
+   background-attachment: fixed;
+   background-position: center;
+}
 .App {
-  text-align: center;
+   
+   height: 800px;
+   width: 100%;
+   background-size: 100%;
+}
+.contenedor{
+   
+   
+	max-width: 1200px;
+	margin: auto;
+	/*padding: 40px 0; */
+
+	/* ****** con css grid ****** */
+	display: grid;
+   grid-template-rows: 1fr auto;
+	gap: 20px;
+   padding: '25px' 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.contenedor-cards {
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+   
+   }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navBar{
+   width: 100%;
+   text-align: right;
 }

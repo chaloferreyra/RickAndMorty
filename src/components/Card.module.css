@@ -1,0 +1,71 @@
+.card {
+  width: 330px;
+  height: 430px;
+  border-radius:15px;
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.2);
+  overflow: hidden;
+  margin: 20px;
+  transition: all 0.25s;
+  background-color: white;
+    position: relative;
+    text-align: center;
+}
+
+.card:hover{
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0,0,0,0.2);
+}
+
+.encabezado{
+  display: grid;
+	grid-template-columns: 5fr 1fr;
+  margin: 5px;
+}
+
+.encabezado span{
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.card img {  
+  width: 330px;
+  height: auto;
+  position: relative;
+  top: 10;
+}
+
+  h4 {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 5px;
+    margin-bottom: 10px;
+        position: absolute;
+        top: 55%;
+        left: 10%;
+  }
+
+.card button{
+  background-color: red;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 8px;
+  width: 30px;
+  height: 30px;
+      
+}
+
+
+.grilla{
+  display: flex;
+  margin-top: 20px;
+}
+
+.caracteristicas{
+  font-weight: 400;
+  margin: auto;
+}
