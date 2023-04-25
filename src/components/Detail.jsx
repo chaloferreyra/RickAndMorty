@@ -29,32 +29,44 @@ function Detail() {
 
 
     return (
-        <div className={styles.detalle}>
+        <>
+          <div>
             {character ? (
-                <div>
-                    <label>Nombre: </label>
-                    <h1>{character.name}</h1>
-                    <img src={character.image} alt="Imagene personaje..." />
-                    <section>
-                        <label>Estatus: </label>
-                        <h3>{character.status}</h3>
-                        <label>Especie: </label>
-                        <h3>{character.species}</h3>
-                        <label>Genero: </label>
-                        <h3>{character.gender}</h3>
-                        <label>Origen: </label>
-                        <h3>{character.origin?.name}</h3>
-                        <div>
-                            <Link to={ROUTES.HOME} >
-                                <h4 >Volver</h4>
-                            </Link>
-                        </div>
-                        
-                    </section>
+                <div className={styles.container}>
+                   
+                  <div className={styles.titulo}>
+                      <h1 className={styles.nombrePersonaje}>{character.name}</h1>
+                      <span className={styles.labelnombre}>Nombre</span>
+                  </div>
+
+                  <div className={styles.detalle}>  
+                      <section>
+                          <span className={styles.label}>Estatus:</span>
+                          <h3>{character.status}</h3>
+                          <span className={styles.label}>Especie: </span>
+                          <h3>{character.species}</h3>
+                          <span className={styles.label}>Genero: </span>
+                          <h3>{character.gender}</h3>
+                          <span className={styles.label}>Origen: </span>
+                          <h3>{character.origin?.name}</h3>
+                          <div>
+                              
+                          </div>
+                          
+                      </section>
+                      <section>
+                          <img src={character.image} alt="Imagene personaje..." />
+                      </section>
+                  </div>
                 </div>
             ) : ( <h2>Loading...</h2>)};
-            
-        </div>
+          </div>
+          <div className={styles.botonVolver}>
+            <Link to={ROUTES.HOME} >
+                 <h4 >Volver</h4>
+            </Link>
+          </div>
+        </>
     )
 }
 

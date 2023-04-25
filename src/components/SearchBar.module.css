@@ -1,16 +1,54 @@
-button{
-    background-color: green;
-    border-radius:4px;
-    padding: 5px;
-    margin-left: 10px;
-}
-.navegacion{
-    padding: 20px;
-    margin: 20px;
-    background-color:rgb(47, 102, 56);
-    border-radius:4px;
-}
+
+
 
 .ingresar{
     margin: 5px;
 }
+
+.botonSearch{
+    display: inline-block;
+    background-color:rgb(47, 102, 56);
+    padding: .5em 1em;
+    color: white;
+    font-size: 100%;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 1px solid #ffffff;
+    border: transparent;
+    border-radius: 2px;
+    margin: 3px;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .botonSearch:hover{
+    background-color:rgb(30, 65, 35);
+  }
+
+  .botonRandom {
+    display: inline-block;
+    background-color:rgb(30, 65, 35);
+    padding: .5em 1em;
+    color: white;
+    font-size: 100%;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 1px solid #999;
+    border: transparent;
+    border-radius: 2px;
+    margin: 3px;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .botonRandom:hover{
+    background-color:rgb(47, 102, 56);
+  }

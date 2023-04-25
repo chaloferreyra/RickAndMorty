@@ -1,7 +1,27 @@
-export const ADD_FAVORITE = 'ADD_FAVORITE';
-export const REMOVE_FAVORITE ='REMOVE_FAVORITE';
+ import {
+    ADD_CHARACTER ,
+    ADD_FAVORITE ,
+    REMOVE_FAVORITE ,
+    DELETE_CHARAPTERS
+ } from "./types"
 
-export const addFavorite = (character)=>{
+
+export const getCharacter = (characterId) =>{
+    return async (dispatch) => {
+
+        await fetch(`https://rickandmortyapi.com/api/character/${characterId}`)
+        .then((response) => response.json())
+        .then((data) => {
+            if (data.name)  {
+                return dispatch({ type: ADD_CHARACTER, payload: data });
+            }else {
+                window.alert('No hay personajes con ese ID');
+            }
+        })
+    }
+}
+
+export const myFavorite = (character)=>{
     return {
         type: ADD_FAVORITE,
         payload: character
@@ -14,3 +34,10 @@ export const removeFavorite = (id) => {
         payload: id 
     }
 }
+
+export const deleteCharacter = (id) => {
+    return {
+        type: DELETE_CHARAPTERS,
+        payload: id
+    }
+};

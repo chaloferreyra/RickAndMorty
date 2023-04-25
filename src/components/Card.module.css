@@ -48,21 +48,48 @@
         left: 10%;
   }
 
-.card button{
-  background-color: red;
-  font-size: 1rem;
-  font-weight: bold;
+.close{
+  display: inline-block;
+  background: rgb(202, 60, 60);
+  padding: .5em 1em;
   color: white;
-  border-radius: 8px;
+  font-size: 100%;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 1px solid #999;
+  border: transparent;
+  border-radius: 2px;
+  margin: 3px;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.card .isFav{
+  background-color: white;
+  font-size:2rem;
+  border: none;
   width: 30px;
   height: 30px;
-      
 }
 
+.card .noFav{
+  background-color: white;
+  font-size:2rem;
+  border: none;
+  width: 30px;
+  height: 30px;
+}
+
+.oculto{
+  display: none;
+}
 
 .grilla{
   display: flex;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .caracteristicas{

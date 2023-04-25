@@ -1,0 +1,27 @@
+.cardFav {
+    width: 330px;
+    height: 405px;
+    border-radius:15px;
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.2);
+    overflow: hidden;
+    margin: 20px;
+    transition: all 0.25s;
+    background-color: white;
+      position: relative;
+      text-align: center;
+    display: block;
+  }
+
+.cardFav .title {
+    color: black;
+    text-align: center;
+    padding: 5px;
+}
+
+.cardFav img {  
+    width: 330px;
+    height: auto;
+    position: relative;
+    
+    top: 8px;
+  }

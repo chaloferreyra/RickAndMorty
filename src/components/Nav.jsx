@@ -3,19 +3,19 @@ import styles from './Nav.module.css';
 import { Link } from "react-router-dom";
 import ROUTES from '../helpers/routes.helper';
 
-function Nav({onSearch}) {
+function Nav() {
     return (
         
         <div className={styles.navegacion}>
-            
+            <div className={styles.linksContainer}>
             <Link to={ROUTES.HOME}>
-                <span>Home</span>
+                <span className={styles.links}>Home</span>
             </Link>
-            <Link to={ROUTES.ABOUT}>
-                <span>About</span>
+            <Link to={ROUTES.FAV}>
+                <span className={styles.links}>Favoritos</span>
             </Link>
-            
-            <SearchBar onSearch={onSearch} />
+            </div>
+            <SearchBar />
         </div>
     )
   
