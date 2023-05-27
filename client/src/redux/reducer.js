@@ -4,7 +4,8 @@ import {
     ADD_FAVORITE,
     REMOVE_FAVORITE,
     DELETE_CHARAPTERS,
-
+    ADD_FAV,
+    REMOVE_FAV
 } from './types'
 
 
@@ -40,12 +41,18 @@ const initialState = {
                 myFavorites: [ ...state.myFavorites, payload]
             };
         }
-        case REMOVE_FAVORITE:
+        case ADD_FAV:{
+            return { ...state, myFavorites: payload, allCharacters: payload 
+        
+            };
+        }
+        case REMOVE_FAV:{
             
             return {
                 ...state,
                 myFavorites: state.myFavorites.filter(myFav => myFav.id !== +payload)
-            };
+            };}
+        
         default:
             return { 
                 ...state

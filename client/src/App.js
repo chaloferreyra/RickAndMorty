@@ -7,6 +7,7 @@ import ROUTES from './helpers/routes.helper'
 import Favorites from './components/Favorites'
 import Detail from './components/Detail';
 import Form from './components/Form';
+import axios from './components/axios';
 
 
 
@@ -14,8 +15,8 @@ function App () {
 
   const navigate = useNavigate();
   const [access, setAccess] = useState(false);
-  const username = 'gonzalo@gmail.com';
-  const password = 'p4ssw0rd';
+  // const username = 'gonzalo@gmail.com';
+  // const password = 'p4ssw0rd';
 
   const location = useLocation();
     
@@ -23,13 +24,23 @@ function App () {
         console.log(location.pathname)
   }
 
-  function login(userData) {
-    if (userData.password === password && userData.username === username) {
-       setAccess(true);
-       navigate('/home');
-    }
-  }
+  // function login(userData) {
+  //   if (userData.password === password && userData.username === username) {
+  //      setAccess(true);
+  //      navigate('/home');
+  //   }
+  // }
   
+  function login(userData) {
+    const { email, password } = userData;
+    const URL = 'http://localhost:3001/rickandmorty/login/';
+    axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+       const { access } = data;
+       setAccess(data);
+       access && navigate('/home');
+    });
+ }
+
   useEffect(() => {
     !access && navigate('/');
   }, [access, navigate]);
